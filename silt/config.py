@@ -3,8 +3,6 @@ SILT Configuration System
 
 Contains the configuration system that handles loading keys and values
 into the config collection for use by the rest of the system.
-
-Strongly inspired by Flask's config system, as it is essentially ideal.
 """
 
 import errno
