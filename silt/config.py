@@ -35,7 +35,7 @@ class Config(dict):
             if key.isupper():
                 self[key] = getattr(obj, key)
 
-    def from_yaml(self, filepath: str) -> None:
+    def from_yaml(self, filepath: str) -> bool:
         """Populate the configuration structure from a yaml file
 
         This method is a convenience wrapper used for shorthand for
@@ -43,7 +43,7 @@ class Config(dict):
 
         See `from_file` for more information.
         """
-        self.from_file(filepath, yaml.safe_load)
+        return self.from_file(filepath, yaml.safe_load)
 
     def from_file(
         self, filepath: str, loader: Callable[[TextIO], dict], silent: bool = False
