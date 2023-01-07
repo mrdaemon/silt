@@ -6,7 +6,7 @@ into the config collection for use by the rest of the system.
 """
 
 import errno
-from typing import Callable, TextIO
+from typing import Any, Callable, TextIO
 
 import yaml
 
@@ -20,7 +20,7 @@ class Config(dict):
     sane and also a nice, extensible abstraction.
     """
 
-    def __init__(self, defaults: dict = {}) -> None:
+    def __init__(self, defaults: dict[str, Any] = {}) -> None:
         dict.__init__(self, defaults)
 
     def from_object(self, obj: object) -> None:
