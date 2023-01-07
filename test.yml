@@ -1,0 +1,8 @@
+FOO: bar
+FARTS:
+  - name: moist
+    color: green
+  - name: dry
+    color: brown
+DOTHING: yes
+DOOTHERTHING: no
